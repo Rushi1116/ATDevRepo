@@ -28,9 +28,9 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
-    @GetMapping("/{id}")
-    public Optional<Student> getStudentById(@PathVariable Long id) {
-        return studentService.getStudentById(id);
+    @GetMapping("/{rollno}")
+    public Optional<Student> getStudentById(@PathVariable Long rollno) {
+        return studentService.getStudentById(rollno);
     }
 
     @PostMapping
@@ -38,12 +38,12 @@ public class StudentController {
         return studentService.addStudent(student);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteStudent(@PathVariable Long id) {
-        studentService.deleteStudent(id);
+    @DeleteMapping("/{rollno}")
+    public void deleteStudent(@PathVariable Long rollno) {
+        studentService.deleteStudent(rollno);
     }
 
-    @PostMapping("/update/{id}")
+    @PostMapping("/update/{rollno}")
     public Student updateStudent(@PathVariable Long rollno, @RequestBody Student updatedStudent) {
         try {
 			return studentService.updateStudent(rollno, updatedStudent);
