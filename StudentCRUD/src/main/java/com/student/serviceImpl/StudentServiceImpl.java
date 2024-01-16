@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.student.entity.Student;
+import com.student.exceptions.StudentNotFoundException;
 import com.student.repository.StudentRepository;
 import com.student.service.StudentService;
 
 @Service
-public class StudentServiceImpl implements StudentService {
+public class StudentServiceImpl implements StudentService  {
 
 	@Autowired
     private StudentRepository studentRepository;
@@ -22,8 +23,8 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Optional<Student> getStudentById(Long id) {
-		return studentRepository.findById(id);
+	public Optional<Student> getStudentById(Long rollno) {
+		return studentRepository.findById(rollno);
 	}
 
 	@Override
@@ -32,18 +33,18 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public void deleteStudent(Long id) {
-		studentRepository.deleteById(id);
+	public void deleteStudent(Long rollno) {
+		studentRepository.deleteById(rollno);
 	}
 
 	@Override
-	public Student updateStudent(Long id, Student updatedStudent) {
-		if (studentRepository.existsById(id)) {
-            updatedStudent.setId(id);
-            return studentRepository.save(updatedStudent);
-        } else {
-            return null; // or throw an exception
-        }
-	}
+	public Student updateStudent(Long rollno, Student updatedStudent) throws StudentNotFoundException {
+		 if (studentRepository.existsById(rollno)) {
+		        updatedStudent.setRollNo(rollno);
+		        return studentRepository.save(updatedStudent);
+		    } else {
+		        throw new StudentNotFoundException("Student with roll number " + rollno + " not found");
+		    }	 
+    }
 
 }

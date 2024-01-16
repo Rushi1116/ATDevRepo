@@ -13,18 +13,18 @@ public class Student {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long rollno;
     private String firstName;
     private String lastName;
     private int age;
     private String email;
     
-	public Long getId() {
-		return id;
+	public Long getRollNo() {
+		return rollno;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setRollNo(Long rollno) {
+		this.rollno = rollno;
 	}
 
 	public String getFirstName() {
@@ -63,9 +63,9 @@ public class Student {
 		super();
 	}
 
-	public Student(Long id, String firstName, String lastName, int age, String email) {
+	public Student(Long rollno, String firstName, String lastName, int age, String email) {
 		super();
-		this.id = id;
+		this.rollno = rollno;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
