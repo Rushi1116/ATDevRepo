@@ -44,9 +44,9 @@ public class StudentController {
     }
 
     @PostMapping("/update/{id}")
-    public Student updateStudent(@PathVariable Long id, @RequestBody Student updatedStudent) {
+    public Student updateStudent(@PathVariable Long rollno, @RequestBody Student updatedStudent) {
         try {
-			return studentService.updateStudent(id, updatedStudent);
+			return studentService.updateStudent(rollno, updatedStudent);
 		} catch (StudentNotFoundException e) {
 			e.printStackTrace();
 		}
