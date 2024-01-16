@@ -33,7 +33,7 @@ spring.jpa.show-sql=true
 ```
 
 ## Cool Ready to go 
-2. Run Inbuilt Tomcat Server to run application
+Run Inbuilt Tomcat Server to run application
 
 
 
