@@ -11,6 +11,8 @@ Clone the repository:
 git clone https://github.com/Rushi116/ATDevRepo.git
 cd ATDevRepo/StudentCRUD
 ```
+Create a Database in your MYSQL named as 'studentdb'
+
 ## Api End Points
 ```
 GET /students: Get all students
