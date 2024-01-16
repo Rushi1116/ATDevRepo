@@ -11,14 +11,16 @@ Clone the repository:
 git clone https://github.com/Rushi116/ATDevRepo.git
 cd ATDevRepo/StudentCRUD
 ```
-```## Api End Points
+## Api End Points
+```
 GET /students: Get all students
 GET /students/{id}: Get student by ID
 POST /students: Add a new student
 POST /students/update/{id}: Update student by ID
 DELETE /students/{id}: Delete student by ID
 ```
-```Database Configuration
+Database Configuration
+```
 #port
 server.port=8081
 #url
