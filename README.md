@@ -11,26 +11,6 @@ Clone the repository:
 git clone https://github.com/Rushi116/ATDevRepo.git
 cd ATDevRepo/StudentCRUD
 ```
-
-## Getting Started
-StudentCRUD/
-|-- src/
-|   |-- main/
-|       |-- java/
-|           |-- com.student/
-|               |-- controller/
-|               |-- entity/
-|               |-- exception/
-|               |-- repository/
-|               |-- service/
-|               |-- serviceImpl/
-|       |-- resources/
-|           |-- application.properties
-|-- target/
-|-- pom.xml
-|-- README.md
-
-
 ## Api End Points
 GET /students: Get all students
 GET /students/{id}: Get student by ID
