@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "e6acd853-7b90-4cb4-b41d-ed9007b0f5ac",
+		"name": "StudentCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24993072"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/students"
+			},
+			"response": []
+		},
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Zuber\",\r\n    \"lastName\" : \"Khalil\",\r\n    \"age\" : \"35\",\r\n    \"email\" : \"z.khalil@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/students"
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/students/2"
+			},
+			"response": []
+		},
+		{
+			"name": "updateStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Hitesh\",\r\n    \"lastName\" : \"Sahani\",\r\n    \"email\" : \"s.hitesh45@gmail.com\",\r\n    \"age\" : \"30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/students/update/20"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8081/students/3"
+			},
+			"response": []
+		}
+	]
+}
